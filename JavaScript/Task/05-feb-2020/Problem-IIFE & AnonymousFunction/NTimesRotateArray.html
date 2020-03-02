@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<script>
+// same in anonymous function
+    var array = function(arr,d,n){
+    var tmp=[];
+    for(i=0;i<d;i++){
+        tmp.push(arr[i])
+    }
+    var i = 0;
+    while (i<d){
+        arr.shift()
+        i += 1
+    }
+    return(arr.concat(tmp))
+     }
+   input = array([10,19,17,13,12,40],3,6);
+   console.log(input)
+//  same in IFHE function 
+
+var array = (function(arr,d,n){
+    var tmp=[];
+    for(i=0;i<d;i++){
+        tmp.push(arr[i])
+    }
+    var i = 0;
+    while (i<d){
+        arr.shift()
+        i += 1
+    }
+    return(arr.concat(tmp))
+     })([10,11,9,22,8,12,40],5,7);
+
+   console.log(array)
+
+
+</script>
+   
+    </head>
+    <body>
+        <p> hi </p>
+    </body>
+
+</html>
